@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Temperature</Name>
+		<Description1>Description: This IPSO object should be used with a temperature sensor to report a temperature measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the temperature sensor. An example measurement unit is degrees Celsius (ucum:Cel).</Description1>
+		<ObjectID>10255</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:10255</ObjectURN>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>			
+			<Item ID="5601">
+				<Name>Min Measured Value</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>Defined by “Units” resource.</Units>
+				<Description>The minimum value measured by the sensor since power ON or reset</Description>
+			</Item>
+			<Item ID="5602">
+				<Name>Max Measured Value</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>Defined by “Units” resource.</Units>
+				<Description>The maximum value measured by the sensor since power ON or reset</Description>
+			</Item>
+			<Item ID="5519">
+				<Name>Min Range Value</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>Defined by “Units” resource.</Units>
+				<Description>The minimum value that can be measured by the sensor</Description>
+			</Item>
+			<Item ID="5520">
+				<Name>Max Range Value</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>Defined by “Units” resource.</Units>
+				<Description>The maximum value that can be measured by the sensor</Description>
+			</Item>
+			<Item ID="5524">
+				<Name>Measure Time Interval</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>measure time interval, unit second </Description>
+			</Item>
+
+			<Item ID="5527">
+				<Name>History Values</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>a list of history values </Description>
+			</Item>
+
+			<Item ID="5700">
+				<Name>Sensor Value</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>Defined by “Units” resource.</Units>
+				<Description>Last or Current Measured Value from the Sensor</Description>
+			</Item>
+			<Item ID="5701">
+				<Name>Sensor Units</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Measurement Units Definition e.g. “Cel” for Temperature in Celsius.</Description>
+			</Item>			
+			<Item ID="5800">
+				<Name>Sensor Battery</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>battery of sensor</Description>
+			</Item>
+			<Item ID="6021"><Name>Timestamp</Name>                
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description>The timestamp of when the measurement was performed.</Description>
+            </Item>	
+            <Item ID="5906"><Name>Sensor Model</Name>                
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description></Description>
+            </Item>
+            <Item ID="5907"><Name>Sensor Serial Number</Name>                
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description></Description>
+            </Item>					
+		</Resources>
+		<Description2></Description2>
+	</Object>
+</LWM2M>

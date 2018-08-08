@@ -1,0 +1,20 @@
+
+File---import---MavenProject: select all the project(leshanxxx) to import;
+
+compile:
+
+1)download maven tool, install and config path(MAVEN_HOME,JAVA_HOME)
+
+2)right click project "leshan-all"---maven---updateProject----select all to update,will trig download dependency, 
+make sure the network is ok(recommend use phone wifi);
+
+3)right click leshan-all/pom.xml----runAs/run configurations---MavenBuild: add new configuration, 
+Main page settings: select leshan for Base directory,  fill "clean package" in Goals, select "update snapshots" & "skip tests";
+JRE page settings: select "workspace default JRE(jdk1.8.0_171)";
+then click run :
+if has problem in build "No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK",
+then: replace JRE with jdk, Windows--》Preference-->InstalledJRE--->AddStandardVM--->choose JDK directory(C:\Program Files\Java\jdk1.8.0_171);
+
+after successful build, will output:\leshan-bsserver-demo\target\leshan-bsserver-demo-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+excute jar : java -jar leshan-bsserver-demo-1.0.0-SNAPSHOT-jar-with-dependencies.jar  will start lwm2m server and web server;
+lwm2mclient visit lwm2m server(could specify server ip), browser visit web server;

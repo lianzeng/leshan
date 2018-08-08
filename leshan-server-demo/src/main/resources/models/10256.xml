@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>Air Quality PM2.5</Name>
+    <Description1><![CDATA[report air quality pm2.5.]]></Description1>
+    <ObjectID>10256</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:x:10256</ObjectURN>
+    <LWM2MVersion>1.0</LWM2MVersion>
+    <ObjectVersion>1.0</ObjectVersion>
+    <MultipleInstances>Single</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+      <Item ID="0">
+        <Name>Serial Bus Num</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration>
+        </RangeEnumeration>
+        <Units>
+        </Units>
+        <Description><![CDATA[device serial bus id.]]></Description>
+      </Item>
+      <Item ID="1">
+        <Name>PM2.5 Quality</Name>
+        <Operations>R</Operations>     
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration>
+        </RangeEnumeration>
+        <Units>
+        </Units>
+        <Description><![CDATA[pm2.5 air quality]]></Description>
+      </Item>
+    </Resources>
+    <Description2 />
+  </Object>
+</LWM2M>
